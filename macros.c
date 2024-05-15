@@ -2,7 +2,6 @@
 #include <stdbool.h>
 
 
-//TODO  написать еще один define scan_d(для строк 55,57) и заменить эти строки на макрос
 #define print(a,b,c,d,e,f,n) printf("%s %s %s %d %d %d %d\n", a,b,c,d,e,f,n)
 #define scan_s(str) scanf("%s", str)
 #define scan_d(num) scanf("%d", num)
@@ -57,14 +56,14 @@ void inputStudents(struct student students[], int count) {
 			//scanf("%s", students[i].patronymic);
       scan_s(students[i].patronymic);
 			printf("Enter the student's group: ");
-//			scanf("%d", &students[i].group);
+      //scanf("%d", &students[i].group);
       scan_d(&students[i].group);
 			printf("Enter the math score: ");
-			scanf("%d", &students[i].mathematics);
+			//scanf("%d", &students[i].mathematics);
 			printf("Enter a physics grade: ");
-			scanf("%d", &students[i].physics);
+			scan_d(&students[i].physics);
 			printf("Enter a chemistry grade: ");
-			scanf("%d", &students[i].chemistry);
+			scan_d(&students[i].chemistry);
 		}
 }
 int main() {
